@@ -3,7 +3,8 @@ These are a collection of progams meant to run on a Tang Nano 9k board.
 I'm using the software provided by GOWIN to do everything. It's pretty decent and very beginner friendly.
 
 Here is a list of the different programs:
-0 - empty template
-1 - cascading LEDs
+
+0. empty template
+1. cascading LEDs
 
 With more to come...
