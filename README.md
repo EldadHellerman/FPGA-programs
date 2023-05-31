@@ -6,5 +6,6 @@ Here is a list of the different programs:
 
 0. empty template
 1. LED blink
+2. Counting on a seven segment display
 
 With more to come...
