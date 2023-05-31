@@ -1,4 +1,7 @@
-module seven_segment_using_lut #(parameter COMMON_ANODE = 0) (input [3:0] n, output [6:0] segments);
+module seven_segment_using_lut
+        #(parameter COMMON_ANODE = 0)
+        (input [3:0] n, output [6:0] segments);
+
     LUT4 lut_a ( .I0(n[0]), .I1(n[1]), .I2(n[2]), .I3(n[3]), .F(segments[0]));
     LUT4 lut_b ( .I0(n[0]), .I1(n[1]), .I2(n[2]), .I3(n[3]), .F(segments[1]));
     LUT4 lut_c ( .I0(n[0]), .I1(n[1]), .I2(n[2]), .I3(n[3]), .F(segments[2]));
@@ -17,7 +20,10 @@ module seven_segment_using_lut #(parameter COMMON_ANODE = 0) (input [3:0] n, out
     defparam lut_g .INIT = COMMON_ANODE ? ~16'b111111_1101111100 : 16'b111111_1101111100;
 endmodule
 
-module seven_segment_using_case #(parameter COMMON_ANODE = 0) (input [3:0] number, output [6:0] segments);
+module seven_segment_using_case
+        #(parameter COMMON_ANODE = 0)
+        (input [3:0] number, output [6:0] segments);
+
     reg [6:0] out;
     assign segments = COMMON_ANODE ? ~out : out;
     
